@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Example Project using parcel-transformer-ejs">
+<!-- https://css-tricks.com/svg-favicons-in-action/ -->
+<!-- https://favicon.io/favicon-generator/ -->
+<link rel="icon" href="/logo-fav.d0fdf758.svg">
+<title>App</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="/index.4a508c1d.css"><script src="/index.59a40e7a.js" defer=""></script>
+</head>
+
+<body class="mdc-typography">
+    <div class="app-root">
+        <aside class="mdc-drawer mdc-drawer--dismissible">
+
+    <div class="mdc-drawer__header">
+        <h3 class="mdc-drawer__title">Lenses</h3>
+        <h6 class="mdc-drawer__subtitle">email@material.io</h6>
+    </div>
+
+    <div class="mdc-drawer__content">
+        <nav class="mdc-deprecated-list">
+            <li class="mdc-deprecated-list-item" tabindex="0">
+                <span class="mdc-deprecated-list-item__ripple"></span>
+                <span class="mdc-deprecated-list-item__text">Single-line item</span>
+            </li>
+            <li class="mdc-deprecated-list-item">
+                <span class="mdc-deprecated-list-item__ripple"></span>
+                <span class="mdc-deprecated-list-item__text">Single-line item</span>
+            </li>
+            <li class="mdc-deprecated-list-item">
+                <span class="mdc-deprecated-list-item__ripple"></span>
+                <span class="mdc-deprecated-list-item__text">Single-line item</span>
+            </li>
+        </nav>
+    </div>
+
+</aside>
+        <div class="mdc-drawer-app-content app-content">
+            <header class="mdc-top-app-bar app-bar">
+    <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>
+            <span class="mdc-top-app-bar__title">Dismissible Drawer</span>
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+
+            <!-- button open images -->
+            <button id="btnOpenImages" class="mdc-button mdc-button--raised mdc-top-app-bar__action-item mdc-button--icon-leading top-app-bar-button-gap">
+                <span class="mdc-button__ripple"></span>
+                <span class="mdc-button__focus-ring"></span>
+                <i class="material-icons mdc-button__icon" aria-hidden="true">content_copy</i>
+                <span class="mdc-button__label">OPEN</span>
+            </button>
+
+            <!-- button lens view -->
+            <button id="btnLensView" class="mdc-button mdc-button--raised mdc-top-app-bar__action-item mdc-button--icon-leading top-app-bar-button-gap">
+                <span class="mdc-button__ripple"></span>
+                <span class="mdc-button__focus-ring"></span>
+                <i class="material-icons mdc-button__icon" aria-hidden="true">blur_circular</i>
+                <span class="mdc-button__label">VIEW</span>
+            </button>
+
+            <!-- button analyze view -->
+            <button id="btnAnalyzeView" class="mdc-button mdc-button--raised mdc-top-app-bar__action-item mdc-button--icon-leading top-app-bar-button-gap">
+                <span class="mdc-button__ripple"></span>
+                <span class="mdc-button__focus-ring"></span>
+                <i class="material-icons mdc-button__icon" aria-hidden="true">analytics</i>
+                <span class="mdc-button__label">ANALYSE</span>
+            </button>
+
+            <!-- button settings -->
+            <button id="btnSettings" class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Open menu">settings</button>
+
+        </section>
+    </div>
+</header>
+            <main class="app-main-content">
+                <div id="view-lens" class="mdc-top-app-bar--fixed-adjust crrrrrontent-hide">
+    <div class="view-lens">
+        <!-- LENS STAGE -->
+        <div class="view-lens-stage">
+
+        </div>
+
+        <!-- TOOL BAR -->
+        <div class="mdc-top-app-bar__row">
+            <div class="view-lens-toolbar-background"></div>
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+
+            </section>
+
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+
+                <button id="view-lens-swap" class="mdc-icon-button material-icons">
+                    <div class="mdc-icon-button__ripple"></div>
+                    <span class="mdc-icon-button__focus-ring"></span>
+                    swap_vertical
+                    <div class="mdc-icon-button__touch"></div>
+                </button>
+
+                <button id="view-lens-reset" class="mdc-icon-button material-icons">
+                    <div class="mdc-icon-button__ripple"></div>
+                    <span class="mdc-icon-button__focus-ring"></span>
+                    center_focus_strong
+                    <div class="mdc-icon-button__touch"></div>
+                </button>
+
+                <button id="view-lens-zoom-in" class="mdc-icon-button material-icons">
+                    <div class="mdc-icon-button__ripple"></div>
+                    <span class="mdc-icon-button__focus-ring"></span>
+                    zoom_in
+                    <div class="mdc-icon-button__touch"></div>
+                </button>
+
+                <button id="view-lens-zoom-out" class="mdc-icon-button material-icons">
+                    <div class="mdc-icon-button__ripple"></div>
+                    <span class="mdc-icon-button__focus-ring"></span>
+                    zoom_out
+                    <div class="mdc-icon-button__touch"></div>
+                </button>
+
+            </section>
+        </div>
+    </div>
+
+    <!-- ARROWS -->
+    <div class="view-lens-arrow-prev no-outline" role="button" tabindex="0">
+        <button class="mdc-icon-button material-icons data-mdc-ripple-is-unbounded">
+            <div class="mdc-icon-button__ripple"></div>
+            <span class="mdc-icon-button__focus-ring"></span>
+            navigate_before
+        </button>
+    </div>
+    <div class="view-lens-arrow-next no-outline" role="button" tabindex="0">
+        <button class="mdc-icon-button material-icons data-mdc-ripple-is-unbounded">
+            <div class="mdc-icon-button__ripple"></div>
+            <span class="mdc-icon-button__focus-ring"></span>
+            navigate_next
+        </button>
+    </div>
+
+
+</div>
+</main></div>
+                
+            
+        </div>
+    
+</body>
+
+</html>
